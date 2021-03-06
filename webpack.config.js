@@ -5,7 +5,8 @@ const LogRemover = require('./webpack-plugins/dist/LogRemover');
 const InjectStyle = require('./webpack-plugins/dist/InjectStyle');
 
 const config = {
-  mode: 'production',
+  mode: 'development',
+  // mode: 'production',
   entry: {
     main: './src/index.ts',
   },
@@ -32,10 +33,16 @@ const config = {
     global: true,
   },
   plugins: [
-    new InjectStyle({
+    new InjectStyle([
+      {
       path: path.resolve(__dirname, './src/extra-styles/loading.css'),
       sync: true,
-    }),
+    },
+      {
+      path: path.resolve(__dirname, './src/extra-styles/not-important.css'),
+      sync: false,
+    }
+  ]),
     new LogRemover(),
     new HtmlWebpackPlugin({ template: './src/index.html' }),
     new CleanWebpackPlugin(),

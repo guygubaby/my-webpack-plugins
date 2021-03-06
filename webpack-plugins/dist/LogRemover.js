@@ -11,9 +11,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = require("fs");
 class LogRemover {
-    constructor() {
-        console.log('log remover plugin registed');
-    }
     apply(compiler) {
         compiler.hooks.done.tapAsync('RemoveLogs', (stats, cb) => __awaiter(this, void 0, void 0, function* () {
             try {

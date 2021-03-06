@@ -8,6 +8,10 @@
     "watch-plugins": "tsc -w --project ./webpack-plugins/tsconfig-plugins.json"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.24",
+    "@types/node": "^14.14.31",
+    "@types/webpack": "^4.41.26",
+    "cheerio": "^1.0.0-rc.5",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.1.1",
     "html-webpack-plugin": "^5.2.0",
@@ -19,7 +23,5 @@
     "webpack": "^5.24.3",
     "webpack-cli": "^4.5.0"
   },
-  "dependencies": {
-    "@types/webpack": "^4.41.26"
-  }
+  "dependencies": {}
 }

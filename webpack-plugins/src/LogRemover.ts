@@ -1,10 +1,6 @@
 import { promises as fs } from 'fs';
 
 class LogRemover {
-  constructor() {
-    console.log('log remover plugin registed');
-  }
-
   apply(compiler: any) {
     compiler.hooks.done.tapAsync('RemoveLogs', async (stats, cb) => {
       try {
